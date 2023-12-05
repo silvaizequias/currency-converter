@@ -1,0 +1,43 @@
+<div class="card">
+  <ng-container *ngIf="converter">
+    <div class="card-header">
+      <div class="header-typography">{{converter.name}}</div>
+    </div>
+    <div class="card-content">
+      <div class="content-typography">
+        <ng-container *ngIf="converter.ask <= 1">
+          <div id="content-text-red">R${{converter.ask}}</div>
+        </ng-container>
+        <ng-container *ngIf="converter.ask <= 5">
+          <div *ngIf="converter.ask > 1" id="content-text-green">R${{converter.ask}}</div>
+        </ng-container>
+        <ng-container *ngIf="converter.ask > 5">
+          <div id="content-text-blue">R${{converter.ask}}</div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="footer-border-top"></div>
+      <div class="footer-content">
+        <div class="footer-item">
+          <span class="item-title">Variacao (%)</span>
+          <span class="item-content">{{converter.pctChange}}</span>
+        </div>
+        <div class="footer-separator"></div>
+        <div class="footer-item">
+          <span class="item-title">Atualizado</span>
+          <span class="item-content">{{converter.create_date}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!converter">
+    <div class="card-header">
+      <div class="header-typography">Ops!</div>
+    </div>
+    <div class="card-content">
+      <span class="content-error">Algo deu errado</span>
+      <button class="button-error" type="submit">recarregar</button>
+    </div>
+  </ng-container>
+</div>
