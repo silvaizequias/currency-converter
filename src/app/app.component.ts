@@ -32,23 +32,23 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.ARS.subscribe((data: any) => {
-      return (this.ARS = {
+      this.ARS = {
         name: String(data.ARSBRL.name).replace('/Real Brasileiro', ''),
         varBid: Number(data.ARSBRL.varBid),
         pctChange: data.ARSBRL.pctChange,
         ask: Number(data.ARSBRL.ask).toFixed(2),
         create_date: new Date(data.ARSBRL.create_date).toLocaleTimeString(),
-      })
+      }
     })
 
     this.CAD.subscribe((data: any) => {
-      return (this.CAD = {
+      this.CAD = {
         name: String(data.CADBRL.name).replace('/Real Brasileiro', ''),
         varBid: Number(data.CADBRL.varBid),
         pctChange: data.CADBRL.pctChange,
         ask: Number(data.CADBRL.ask).toFixed(2),
         create_date: new Date(data.CADBRL.create_date).toLocaleTimeString(),
-      })
+      }
     })
 
     this.GBP.subscribe((data: any) => {
