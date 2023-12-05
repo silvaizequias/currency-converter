@@ -52,13 +52,13 @@ export class AppComponent implements OnInit {
     })
 
     this.GBP.subscribe((data: any) => {
-      return (this.GBP = {
+      this.GBP = {
         name: String(data.GBPBRL.name).replace('/Real Brasileiro', ''),
         varBid: Number(data.GBPBRL.varBid),
         pctChange: data.GBPBRL.pctChange,
         ask: Number(data.GBPBRL.ask).toFixed(2),
         create_date: new Date(data.GBPBRL.create_date).toLocaleTimeString(),
-      })
+      }
     })
   }
 }
