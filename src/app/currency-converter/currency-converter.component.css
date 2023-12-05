@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container .cards {
+  min-height: 100%;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
