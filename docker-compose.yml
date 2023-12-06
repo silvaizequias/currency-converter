@@ -7,7 +7,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - '44200:4200'
+      - '4200:4200'
     volumes:
       - ./:/app
     restart: always

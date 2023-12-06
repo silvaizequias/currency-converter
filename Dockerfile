@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 4200/tcp
 
-CMD [ "yarn", "start" ]
+CMD ["ng","serve","--host", "0.0.0.0"]
