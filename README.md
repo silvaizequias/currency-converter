@@ -1,4 +1,4 @@
-# Currency Converter Challenge
+# Currency Converter
 
 Este projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli) usando a versão 17.0.5 atendendo a demanda de requisitos de um desafio técnico com o principal objetivo:
 
